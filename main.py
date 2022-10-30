@@ -7,26 +7,6 @@ from dat import *
 
 def main():
 
-    """
-    path_to_file =  "E:\\MODDING\\Archive\\_Ace Combat\\Ace Combat 7\\Nouveau Dossier (2)\\A_test_decompress.dat"
-    filename = os.path.splitext(path_to_file)[0]
-    file_size = os.path.getsize(path_to_file)
-
-    f_in = open(path_to_file, "rb")
-    br = BinaryReader(f_in, "<")
-
-    data = br.readBytes(file_size)
-    data = zlib.compress(data)
-    #data = zlib.decompress(data)
-    data = crypt(bytearray(data), len(data))
-
-    f_in.close()
-
-    f_out  = open(filename + "_recrypt.dat", "wb")
-    f_out.write(data)
-    f_out.close()
-    """
-
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-i", "--Input")
