@@ -1,17 +1,20 @@
-def ToSignedByte(byte):
-    if byte > 127:
-        return -(256 - byte) & 0xFF
+def ToSignedByte(data):
+    data &= 0x7F
+    if data > 127:
+        return -(256 - data)
     else:
-        return byte
+        return data
 
-def ToUnsignedByte(byte):
-    if byte > 255:
-        return byte - 256 & 0xFF
+def ToUnsignedByte(data):
+    data &= 0xFF
+    if data > 255:
+        return 256 - data
     else:
-        return byte
+        return data
 
-def ToUnsignedInt(integer):
-    if integer > 4294967295:
-        return integer - 4294967296 & 0xFF
+def ToUnsignedInt(data):
+    data &= 0xFFFFFFFE
+    if data > 0xFFFFFFFE:
+        return data - 0xFFFFFFFF
     else:
-        return integer
+        return data
