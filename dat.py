@@ -9,7 +9,7 @@ def crypt(data, file_size):
     position = 0 # r12d
     r15 = 0
 
-    while position < file_size:
+    while position < len(data):
         
         ecx = ebx * 8
         position += 1
