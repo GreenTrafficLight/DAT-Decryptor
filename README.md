@@ -10,5 +10,5 @@ python <Directory of main.py> -i <Input File> -o <Output Directory> -d
 
 For recryption **( Note : you will have to use the decompressed file )**
 ```
-python <Directory of main.py>  -i <Input File> -o <Output Directory> -c
+python <Directory of main.py> -i <Input File> -o <Output Directory> -c
 ```
